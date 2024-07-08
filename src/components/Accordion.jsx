@@ -41,6 +41,7 @@ function Accordion() {
 
 function AccordionData({ data }) {
   const [currOpen, setCurrOpen] = useState(null);
+
   return (
     <div className="accordion">
       {data.map((item) => (
@@ -56,18 +57,16 @@ function AccordionData({ data }) {
 }
 
 function AccordionItem({ item, currOpen, onOpen }) {
-  // const [isOpen, setIsOpen] = useState(null);
   const isOpen = item.id === currOpen;
 
   function handleToggle(id) {
     onOpen(isOpen ? null : id);
-    // onOpen(item.id);
   }
+
   return (
     <div
       className={`item ${isOpen ? "open" : ""}`}
       onClick={() => handleToggle(item.id)}
-      // onClick={handleToggle}
     >
       <div className="title">
         <p className="title-header">{item.question}</p>
@@ -80,35 +79,3 @@ function AccordionItem({ item, currOpen, onOpen }) {
 }
 
 export default Accordion;
-
-// const [selectedId, setSelectedId] = useState(null);
-
-// function handleSelection(id) {
-//   setSelectedId(selectedId === id ? null : id);
-// }
-
-// return (
-//   <div className="wrapper">
-//     <div className="accordion">
-//       {data && data.length > 0 ? (
-//         data.map((dataItem) => (
-//           <div key={dataItem.id} className="item">
-//             <div
-//               onClick={() => handleSelection(dataItem.id)}
-//               className="title"
-//             >
-//               <h3>{dataItem.question}</h3>
-//               <span>+</span>
-//             </div>
-
-//             {selectedId === dataItem.id ? (
-//               <div className="content">{dataItem.answer}</div>
-//             ) : null}
-//           </div>
-//         ))
-//       ) : (
-//         <div>No data found!</div>
-//       )}
-//     </div>
-//   </div>
-// );
