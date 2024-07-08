@@ -1,0 +1,49 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper h1 {
+  color: #614101;
+  /* color: #063b3b; */
+}
+.accordion {
+  width: 500px;
+}
+.item {
+  background-color: #614101;
+  /* background-color: #063b3b; */
+  /* color: #ffffff; */
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.title {
+  color: #fff;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.content {
+  color: #ffffff;
+  height: auto;
+  line-height: 1.2;
+  padding: 15px 0;
+}
+.title-header,
+.title-icon {
+  font-size: 24px;
+}
+.open {
+  border-top: 4px solid #fff;
+}
+.open .title-header,
+.open .title-icon {
+  color: #fff;
+}
